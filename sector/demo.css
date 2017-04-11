@@ -1,0 +1,20 @@
+.square {
+		position:absolute;
+		width:400px;
+		height:400px;
+		/* position为absolute才能使用clip */
+		clip: rect(0,400px,400px,200px);
+		
+	}
+.circle {
+	position: absolute;
+	width:400px;
+	height:400px;
+	background-color:yellow;
+	/* Rotate div */
+	transform:rotate(-60deg);
+	-ms-transform:rotate(-60deg); /* IE 9 */
+	-webkit-transform:rotate(-60deg); /* Safari and Chrome */
+	clip: rect(0,400px,400px,200px);
+	border-radius: 50%;
+}
