@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="404" height="404" id="main">
+        <!--
+            0. 区域宽度404，高度404，左上角为原点，水平向右为x轴方向，垂直向下为y轴方向
+            1. M表示起点坐标，第一块扇形起点坐标(204,200)
+            2. L表示画直线到所在坐标，即从(204,200)出发画直线到(204,0)
+            3. A表示椭圆弧，共有7个参数：RX,RY,XROTATION,FLAG1,FLAG2,X,Y
+                RX,RY指所在椭圆的半轴大小
+                XROTATION指椭圆的X轴与水平方向顺时针方向夹角，可以想像成一个水平的椭圆绕中心点顺时针旋转XROTATION的角度。
+                FLAG1只有两个值，1表示大角度弧线，0为小角度弧线。
+                FLAG2只有两个值，确定从起点至终点的方向，1为顺时针，0为逆时针
+                X,Y为终点坐标
+            4. 以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+        -->
+        <path d="M204,200 L204,0 A200,200 0 0,1 381,289 z"
+            style="fill:red;
+		    fill-opacity: 1;
+		    stroke:black;
+		    stroke-width: 0"/>
+        <path d="M202,203 L380,293 A200,200 0 0,1 28,293 z"
+	        style="fill:green;
+		    fill-opacity: 1;
+		    stroke:black;
+		    stroke-width: 0"/>
+	    <path d="M200,200 L27,290 A200,200 0 0,1 200,0 z"
+	        style="fill:blue;
+		    fill-opacity: 1;
+		    stroke:black;
+		    stroke-width: 0"/>
+    </svg>
+    <script type="text/javascript" src="demo.js"></script>
+</body>
+</html>
