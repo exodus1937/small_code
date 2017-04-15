@@ -1,20 +1,61 @@
+.wrap {
+	width: 430px;
+	height: 430px;
+	border: solid 1px silver;
+	border-radius: 50%;
+	position: relative;
+}
 .square {
-		position:absolute;
-		width:400px;
-		height:400px;
-		/* position为absolute才能使用clip */
-		clip: rect(0,400px,400px,200px);
-		
-	}
+	position:absolute;
+	width:400px;
+	height:400px;
+	/* position为absolute才能使用clip */
+	clip: rect(0,400px,400px,200px);
+}
 .circle {
 	position: absolute;
 	width:400px;
 	height:400px;
-	background-color:yellow;
 	/* Rotate div */
 	transform:rotate(-60deg);
 	-ms-transform:rotate(-60deg); /* IE 9 */
 	-webkit-transform:rotate(-60deg); /* Safari and Chrome */
 	clip: rect(0,400px,400px,200px);
+	border-radius: 50%;
+}
+#square1 {
+	top: 12px;
+	left: 18px;
+}
+#circle1 {
+	background-color:green;
+}
+#square2 {
+	top: 18px;
+	left: 15px;
+	transform:rotate(120deg);
+	-ms-transform:rotate(120deg); /* IE 9 */
+	-webkit-transform:rotate(120deg); /* Safari and Chrome */
+}
+#circle2 {
+	background-color: red;
+}
+#square3 {
+	top: 12px;
+	left: 12px;
+	transform:rotate(-120deg);
+	-ms-transform:rotate(-120deg); /* IE 9 */
+	-webkit-transform:rotate(-120deg); /* Safari and Chrome */
+}
+#circle3 {
+	background-color: red;
+}
+.inner_circle {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 115px;
+	left: 115px;
+	background-color: white;
 	border-radius: 50%;
 }
